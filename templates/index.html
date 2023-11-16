@@ -6,8 +6,17 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
 </head>
-<body>
-Welcome{{ Username.username }}
+<body><br>
+Welcome {{ username.username }} <br><br>
+<a href="{% url 'upload' %}" class="btn btn-outline-danger">Upload Image</a>
+<a href="{% url 'image' %}" class="btn btn-outline-danger">Show Image</a><br><br><br>
+
+<a href="{% url 'add' %}" class="btn btn-outline-danger">Add Product</a>
+<a href="{% url 'show' %}" class="btn btn-outline-dark">View Product</a>
+
 </body>
 </html>
